@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,7 +9,7 @@ import ErrorPage from './components/ErrorPage';
 function App() {
   return (
     <div>
-        <BrowserRouter>
+        
         <NavBar/>
         <Routes>
           <Route path='' element={<Home/>}/>
@@ -17,10 +17,8 @@ function App() {
           <Route path='/products' element={<Products/>}/>
           <Route path='*' element={<ErrorPage/>}/>
         </Routes>
-        </BrowserRouter>
       
       
-
     </div>
   );
 }
